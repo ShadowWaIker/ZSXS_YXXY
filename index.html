@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>忻州师范学院优秀校友名录</title>
+  <link rel="stylesheet" href="./css/layui.css">
+  <link rel="stylesheet" href="./css/xy.css">
+  <!--<link rel="stylesheet" href="./css/loading.css">-->
+  <script src="./layui.js"></script>
+  <script src="./js/xy.js"></script>
+    <script type="text/javascript">
+	try{
+		//判断是否是手机端
+		if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+			alert("建议您使用PC端访问！");	
+		}else{
+			//window.location.href="cindex.html";
+		}
+		//判断是否是IE浏览器
+		if (!!window.ActiveXObject || "ActiveXObject" in window) {
+			alert("请不要使用IE浏览器或兼容模式访问！");
+			//window.location.href = 'http://zs.xzsyzjc.cn' //跳转页面
+			document.write("<h1>请不要使用“IE浏览器”或“兼容模式”访问！</h1>");
+			document.execCommand("Stop") //停止加载页面
+		}
+		if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger"){
+			alert("请不要使用微信浏览器访问！");
+			//window.location.href = 'wx.html' //跳转页面
+			document.execCommand("Stop")
+		}
+	}catch(e){}
+   </script>
+</head>
+<body>
+ <!-- 你的HTML代码 -->
+ <img style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;height: 100%;" alt="" src="http://file.xzsyzjc.cn/photos/public/School_Badge_Black.png">
+ <div class="xy-loading" style="display: none;">
+	<div class="skype-loader" style="margin-top: 40%;">
+		<div class="dot">
+			<div class="first"></div>
+		</div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+	加载中...
+ </div>
+
+ <div class="xy-index">
+	<fieldset class="layui-elem-field layui-field-title">
+  		<legend style="font-size: 40px;">忻州师范学院优秀校友名录</legend>
+	</fieldset>
+	<ul class="layui-nav xy-index-nav" lay-filter="demo">
+	  <li class="layui-nav-item layui-this yxxy"><a href="javascript:;">优秀校友代表</a></li>
+	  <li class="layui-nav-item"><a href="javascript:;">优秀校友</a></li>
+	  <li class="layui-nav-item xy-right login" lay-unselect="">
+	  	<a href="javascript:;">登陆</a>
+	  </li>
+	  <li class="layui-nav-item xy-right logout" lay-unselect="" style="display: none;">
+	    <a href="javascript:;"><i class="layui-icon layui-icon-user"></i> <str>请不要使用“IE浏览器”或“兼容模式”访问！</str></a>
+	    <dl class="layui-nav-child">
+	      <dd><a href="javascript:;">退出</a></dd>
+	    </dl>
+	  </li>
+	</ul>
+	<div class="xy-list">
+	</div>
+ </div>
+ <div class="footer">
+	<div class="footer-zsxs">
+		<image src="http://file.xzsyzjc.cn/Photos/logo/zsxs-icon-gl.png"></image>
+		<p>掌上忻师</p>
+	</div>
+	<div class="footer-other">招生就业指导处 · 大学生就业创业小组</div>
+	<div class="footer-other">Copyright © 2016-2018 <a href="http://www.rebeta.cn">Rebeta.cn</a> All Rights Reserved.</div>
+</div>
+</body>
+</html>

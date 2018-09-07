@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>开始使用layui</title>
+  <link rel="stylesheet" href="./css/layui.css">
+  <link rel="stylesheet" href="./css/xy.css">
+  <script src="./layui.js"></script>
+</head>
+<body>
+ <!-- 你的HTML代码 -->
+ <div class="xy-login">
+ 	<div class="xy-title">忻&nbsp;州&nbsp;师&nbsp;范&nbsp;学&nbsp;院<br>优秀校友名录</div>
+	<form class="layui-form layui-form-pane" action="">
+	  <div class="layui-form-item">
+		<label class="layui-form-label">用&nbsp;户&nbsp;名</label>
+		<div class="layui-input-block">
+		  <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="请输入用户名" class="layui-input">
+		</div>
+	  </div>
+	  <div class="layui-form-item">
+		<label class="layui-form-label">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+		<div class="layui-input-block">
+		  <input type="password" name="password" lay-verify="password" autocomplete="off" placeholder="请输入密码" class="layui-input">
+		</div>
+	  </div>
+	  <div class="layui-form-item">
+		<button class="layui-btn xy-right" lay-submit="" lay-filter="login">登 陆</button>
+	  </div>
+	</form>
+ </div>
+ <script>
+	//引入模块
+	layui.use('form', function(){
+	  var form = layui.form;
+	  //监听提交
+	  form.on('submit(login)', function(data){
+	  	data.field.flag = "666"
+	    layer.msg(JSON.stringify(data.field));
+
+	    return false;
+	  });
+	  //自定义验证规则
+	  form.verify({
+	    password: [/(.+){6,12}$/, '密码必须6到12位']
+	    ,content: function(value){
+	      layedit.sync(editIndex);
+	    }
+	  });
+	});
+</script>
+</body>
+</html>
